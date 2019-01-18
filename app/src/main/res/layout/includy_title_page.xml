@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--标题统一-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <!--状态栏占位符-->
+    <View
+        android:layout_alignParentTop="true"
+        android:id="@+id/view_statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.35"
+            android:layout_height="@dimen/y16"
+            android:onClick="SendBack"/>
+        <!--为了让标题居中，所以用Rel布局-->
+        <RelativeLayout
+            android:id="@+id/rel_title"
+            android:layout_width="0dp"
+            android:layout_weight="9.3"
+            android:layout_height="match_parent"  >
+            <!--这个是用来返回-->
+            <View
+                android:layout_width="@dimen/x55"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:onClick="SendBack"/>
+
+            <!--这个是用来显示-->
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/y9"
+                android:layout_height="@dimen/y16"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/back_icon"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toLeftOf="@+id/iv_collection"
+                android:layout_alignBottom="@+id/iv_back"
+                android:layout_toRightOf="@+id/iv_back"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ceshi_txt"
+                    android:textColor="@color/black1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/txt_defalut4" />
+            </LinearLayout>
+
+            <!--收藏-->
+            <ImageView
+                android:id="@+id/iv_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignBottom="@+id/iv_share"
+                android:layout_toLeftOf="@+id/iv_share"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/uncollection2_icon" />
+
+            <!--分享-->
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x10"
+                android:background="@drawable/share_icon"/>
+
+            <!--右边字-->
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_hui3"
+                android:text="@string/default_txt"
+                android:textSize="@dimen/txt_defalut3"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.35"
+            android:layout_height="@dimen/y16" >
+        </View>
+    </LinearLayout>
+<!--下划线-->
+    <View
+        android:id="@+id/lin_title_underline"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/rel_title"
+        android:background="@color/search_bgcolor4" />
+</LinearLayout>

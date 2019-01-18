@@ -1,0 +1,90 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <!--//字体设置-->
+    <style name="MyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:typeface">monospace</item>
+        <!--<item name="android:textViewStyle">@style/MyTextViewStyle</item>-->
+        <!--<item name="android:radioButtonStyle">@style/MyRadViewStyle</item>-->
+    </style>
+
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+
+    <declare-styleable name="CYTextView">
+        <attr name="textwidth" />
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="reference|color"/>
+        <attr name="lineSpacingExtra" format="dimension"/>
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="CusTextView">
+        <!--是否有框架-->
+        <attr name="islineFrame" format="boolean"/>
+        <!--线框粗细-->
+        <attr name="lineFrameWidth" format="dimension"/>
+        <!--线框颜色-->
+        <attr name="lineFrameColor" format="reference|color"/>
+        <!--左右内边距-->
+
+        <attr name="LRPadding" format="dimension"/>
+        <!--上下内边距-->
+        <attr name="TBPadding" format="dimension"/>
+        <!--线框的圆半径-->
+        <attr name="lineFrameRadius" format="dimension"/>
+        <!--线框是空心还是实心-->
+        <attr name="lineFrameStyle" format="dimension">
+            <enum name="stroke" value="1"/>
+            <enum name="fill" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <!--top To Bottom-->
+    <style name="popwindows_animation">
+        <item name="android:windowEnterAnimation">@anim/popwindows_animation_appear</item>
+        <item name="android:windowExitAnimation">@anim/popwindows_animation_disappear</item>
+    </style>
+
+
+    <style name="CustomAnim">
+        <item name="android:windowEnterAnimation">@anim/custom_push_down_in</item>
+        <item name="android:windowExitAnimation">@anim/custom_push_up_out</item>
+    </style>
+
+    <style name="CustomTheme" parent="DefaultCityPickerTheme">
+        <item name="cpCancelTextColor">@color/color_green</item>
+        <item name="cpSearchCursorDrawable">@color/color_green</item>
+        <item name="cpIndexBarNormalTextColor">@color/color_green</item>
+        <item name="cpIndexBarSelectedTextColor">@color/color_green</item>
+        <item name="cpSectionHeight">@dimen/custom_section_height</item>
+        <item name="cpOverlayBackground">@color/color_green</item>
+    </style>
+
+    </resources>

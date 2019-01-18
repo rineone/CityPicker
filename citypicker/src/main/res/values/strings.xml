@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CityPicker</string>
+    <string name="unknow">未知</string>
+    <string name="cp_search_hint_text">城市中文名或拼音</string>
+    <string name="cp_cancel">取消</string>
+    <string name="cp_no_result">没有找到，换个词试试~</string>
+    <string name="cp_locate_failed">定位失败</string>
+    <string name="cp_locating">正在定位…</string>
+    <!--定位-->
+    <string name="loc_city_first">定</string>
+    <!--历史-->
+    <string name="his_city_first">历</string>
+    <string name="his_city_left_nav">历史</string>
+    <string name="his_city_nav">历史城市</string>
+    <!--热门-->
+    <string name="hot_city_first">热</string>
+    <string name="hot_city_left_nav">热门</string>
+    <string name="hot_city_nav">热门城市</string>
+</resources>

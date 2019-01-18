@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">城市选择</string>
+    <string name="ceshi_txt">测试</string>
+    <string name="default_txt">--</string>
+    <!--tab6-->
+    <string name="tab6_title">城市选择</string>
+    <string name="tab6_location_txt">当前城市：杭州</string>
+    <string name="tab6_hot_city">指定热门城市</string>
+    <string name="tab6_his_city">是否开启历史城市纪录</string>
+    <string name="tab6_enable_anim">启用动画效果（是否开启进入动画）</string>
+    <string name="tab6_anim">自定义动画(进入的动画区别)</string>
+    <string name="tab6_click_change">点击更换:</string>
+    <string name="tab6_style_defaule">默认主题</string>
+    <string name="tab6_style_cus">自定义主题</string>
+    <string name="tab6_choice_city">选择城市</string>
+</resources>

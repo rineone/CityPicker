@@ -1,0 +1,35 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="txt_tab_defalut">10sp</dimen>
+    <dimen name="txt_defalut01">11sp</dimen>
+    <dimen name="txt_defalut">12sp</dimen>
+    <dimen name="txt_defalut1_1">13sp</dimen>
+    <dimen name="txt_defalut2">14sp</dimen>
+    <dimen name="txt_defalut2_1">15sp</dimen>
+    <dimen name="txt_defalut3">16sp</dimen>
+    <dimen name="txt_defalut3_1">17sp</dimen>
+    <dimen name="txt_defalut4">18sp</dimen>
+    <dimen name="txt_defalut4_1">19sp</dimen>
+    <dimen name="txt_defalut5">20sp</dimen>
+    <dimen name="txt_defalut5_1">21sp</dimen>
+    <dimen name="txt_defalut6">22sp</dimen>
+    <dimen name="txt_defalut7">24sp</dimen>
+    <dimen name="txt_defalut8">26sp</dimen>
+    <dimen name="txt_defalut9">28sp</dimen>
+    <dimen name="txt_defalut10">30sp</dimen>
+    <dimen name="txt_defalut11">32sp</dimen>
+
+    <dimen name="txt_home_grid_title">14sp</dimen>
+
+    <!--关于底部弹窗数据-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="bottom_menu_btn_height">48dp</dimen>
+    <dimen name="bottom_menu_corner">6dp</dimen>
+    <dimen name="bottom_menu_btn_margin">2dp</dimen>
+    <dimen name="bottom_menu_btn_text_size">18dp</dimen>
+    <dimen name="bottom_menu_layout_margin">12dp</dimen>
+
+    <dimen name="custom_section_height">36dp</dimen>
+</resources>
+

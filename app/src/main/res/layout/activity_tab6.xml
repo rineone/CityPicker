@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <include
+        android:id="@+id/include_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/includy_title_page"/>
+    <TextView
+        android:id="@+id/tv_tab6_current"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:gravity="center"
+        android:text="@string/tab6_location_txt"
+        android:textSize="18sp"/>
+
+    <CheckBox
+        android:id="@+id/cb_tab6_hot"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/tab6_hot_city"
+        android:textSize="16sp"/>
+    <CheckBox
+        android:id="@+id/cb_tab6_his"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/tab6_his_city"
+        android:textSize="16sp"/>
+    <CheckBox
+        android:id="@+id/cb_tab6_enable_anim"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/tab6_enable_anim"
+        android:textSize="16sp"/>
+    <CheckBox
+        android:id="@+id/cb_tab6_anim"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/tab6_anim"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab6_click_change"/>
+    <Button
+        android:id="@+id/btn_tab6_style"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="@string/tab6_style_defaule"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_tab6_pick"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/tab6_choice_city"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"/>
+</LinearLayout>
