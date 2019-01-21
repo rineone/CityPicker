@@ -94,6 +94,9 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStyle(STYLE_NORMAL, R.style.CityPickerStyle);
+        //设置了SOFT_INPUT_ADJUST_RESIZE，dialog也不会被往上顶
+        setStyle( STYLE_NORMAL, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+
     }
 
     public void setLocatedCity(LocatedCity location){
@@ -243,6 +246,8 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
         Window window = dialog.getWindow();
         if (window != null) {
             window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+            //设置软键盘弹出模式
+//            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
             window.setGravity(Gravity.BOTTOM);
             window.setLayout(width, height - ScreenUtil.getStatusBarHeight(getActivity()));
             if (enableAnim) {

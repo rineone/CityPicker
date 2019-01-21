@@ -29,7 +29,6 @@ public class CityPicker {
     private boolean isShowHisCity;
     private LocatedCity mLocation;
     private List<HotCity> mHotCities;
-    private List<HisCity> mHisCities;
     private OnPickListener mOnPickListener;
 
     private CityPicker(){}
@@ -97,15 +96,6 @@ public class CityPicker {
         return this;
     }
 
-    /**
-     * 添加历史城市
-     * @param data
-     * @return
-     */
-    public CityPicker setHisCities(List<HisCity> data){
-        this.mHisCities = data;
-        return this;
-    }
 
     /**
      * 启用动画效果，默认为false
@@ -139,7 +129,6 @@ public class CityPicker {
                 CityPickerDialogFragment.newInstance(enableAnim);
         cityPickerFragment.setLocatedCity(mLocation);
         cityPickerFragment.setHotCities(mHotCities);
-        cityPickerFragment.setHisCities(mHisCities);
         cityPickerFragment.setAnimationStyle(mAnimStyle);
         cityPickerFragment.setOnPickListener(mOnPickListener);
         cityPickerFragment.isShowHisCity(isShowHisCity);

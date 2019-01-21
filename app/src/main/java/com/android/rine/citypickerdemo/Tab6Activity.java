@@ -118,7 +118,6 @@ public class Tab6Activity extends BaseFragmentActivity  implements CompoundButto
                         .setLocatedCity(null)
                         .isShowHisCity(isShowHisCity)
                         .setHotCities(hotCities)
-                        .setHisCities(hisCities)
                         .setOnPickListener(new OnPickListener() {
                             @Override
                             public void onPick(int position, City data) {
