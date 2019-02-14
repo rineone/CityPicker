@@ -330,7 +330,10 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
         dismiss();
         if (mOnPickListener != null){
             mOnPickListener.onPick(position, data);
-            saveHisData(data);
+            //未知不添加
+            if (!data.getName().equals(getResources().getString(R.string.unknow))){
+                saveHisData(data);
+            }
         }
     }
 
