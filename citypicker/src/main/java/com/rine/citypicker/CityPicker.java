@@ -25,6 +25,8 @@ public class CityPicker {
 
     private boolean enableAnim;
     private int mAnimStyle;
+    private int mCityStyle;
+    private int mSearchStyle;
     /**是否显示历史城市**/
     private boolean isShowHisCity;
     private LocatedCity mLocation;
@@ -73,6 +75,26 @@ public class CityPicker {
      */
     public CityPicker isShowHisCity(boolean isShowHisCity) {
         this.isShowHisCity = isShowHisCity;
+        return this;
+    }
+
+    /**
+     * 设置动画效果
+     * @param cityStyle
+     * @return
+     */
+    public CityPicker setCityStyle(@StyleRes int cityStyle) {
+        this.mCityStyle = cityStyle;
+        return this;
+    }
+
+    /**
+     * 设置搜索类型
+     * @param searchStyle
+     * @return
+     */
+    public CityPicker setSearchStyle( int searchStyle) {
+        mSearchStyle = searchStyle;
         return this;
     }
 
@@ -129,8 +151,10 @@ public class CityPicker {
                 CityPickerDialogFragment.newInstance(enableAnim);
         cityPickerFragment.setLocatedCity(mLocation);
         cityPickerFragment.setHotCities(mHotCities);
+        cityPickerFragment.setCityStyle(mCityStyle);
         cityPickerFragment.setAnimationStyle(mAnimStyle);
         cityPickerFragment.setOnPickListener(mOnPickListener);
+        cityPickerFragment.setSearchStyle(mSearchStyle);
         cityPickerFragment.isShowHisCity(isShowHisCity);
         cityPickerFragment.show(ft, TAG);
     }

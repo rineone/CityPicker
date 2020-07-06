@@ -2,7 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?attr/cpMainBgColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/cpTitleHeight"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/iv_cp_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/cpMainBgColor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="?attr/cpTitleStr"
+            android:textStyle="bold"
+            android:textColor="?attr/cpTitleTextColor"
+            android:textSize="?attr/cpTitleTextSize"/>
+    </RelativeLayout>
 
     <include
         layout="@layout/cp_search_view" />
@@ -16,6 +36,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cp_city_search_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/cp_overlay"
@@ -34,8 +61,15 @@
             android:layout_width="@dimen/cp_index_bar_width"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="?attr/cpIndexBarMarginTop"
+            android:layout_marginBottom="?attr/cpIndexBarMarginBottom"/>
 
+        <View
+            android:id="@+id/view_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
         <include layout="@layout/cp_empty_view"/>
     </RelativeLayout>
 </LinearLayout>

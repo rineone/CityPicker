@@ -59,11 +59,11 @@ public class Tab6Activity extends BaseFragmentActivity  implements CompoundButto
         enableCB = findViewById(R.id.cb_tab6_enable_anim);
         themeBtn = findViewById(R.id.btn_tab6_style);
         btPicker = findViewById(R.id.btn_tab6_pick);
-        theme = R.style.CustomTheme;
+        theme = R.style.CustomCityPickerTheme;
         setTheme(theme);
         if (theme == R.style.DefaultCityPickerTheme){
             themeBtn.setText(getString(R.string.tab6_style_defaule));
-        }else if (theme == R.style.CustomTheme){
+        }else if (theme == R.style.CustomCityPickerTheme){
             themeBtn.setText(getString(R.string.tab6_style_cus));
         }
     }
@@ -101,9 +101,9 @@ public class Tab6Activity extends BaseFragmentActivity  implements CompoundButto
                         theme = R.style.DefaultCityPickerTheme;
                     }else if (themeBtn.getText().toString().startsWith("默认")){
                         themeBtn.setText(getString(R.string.tab6_style_cus));
-                        theme = R.style.CustomTheme;
+                        theme = R.style.CustomCityPickerTheme;
                     }
-                    setTheme(theme);
+//                    setTheme(theme);
 //                    recreate();
                 }catch (Exception e){
                     Log.e("错误","错误："+e.toString());
@@ -115,6 +115,8 @@ public class Tab6Activity extends BaseFragmentActivity  implements CompoundButto
                 CityPicker.from(Tab6Activity.this)
                         .enableAnimation(enable)
                         .setAnimationStyle(anim)
+                        .setCityStyle(theme)
+                        .setSearchStyle(2)
                         .setLocatedCity(null)
                         .isShowHisCity(isShowHisCity)
                         .setHotCities(hotCities)

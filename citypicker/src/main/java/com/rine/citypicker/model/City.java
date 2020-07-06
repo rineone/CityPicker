@@ -25,7 +25,8 @@ public class City implements Serializable {
      */
     public String getSection(){
         if (TextUtils.isEmpty(pinyin)) {
-            return "#";
+            return "";
+//            return "#";
         } else {
             String c = pinyin.substring(0, 1);
             Pattern p = Pattern.compile("[a-zA-Z]");
@@ -38,7 +39,8 @@ public class City implements Serializable {
                     || TextUtils.equals(c, "热"))
                 return pinyin;
             else
-                return "#";
+                return "";
+//              return "#";
         }
     }
 

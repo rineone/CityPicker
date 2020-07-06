@@ -25,11 +25,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rine.citypicker.adapter.CityListAdapter;
 import com.rine.citypicker.adapter.InnerListener;
 import com.rine.citypicker.adapter.OnPickListener;
+import com.rine.citypicker.adapter.SearchAdapter;
 import com.rine.citypicker.adapter.decoration.DividerItemDecoration;
 import com.rine.citypicker.adapter.decoration.SectionItemDecoration;
 import com.rine.citypicker.db.DBManager;
@@ -50,21 +52,29 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
         View.OnClickListener, SideIndexBar.OnIndexTouchedChangedListener, InnerListener {
     private View mContentView;
     private RecyclerView mRecyclerView;
+    private RecyclerView mSearchRecyclerView;
     private View mEmptyView;
     private TextView mOverlayTextView;
     private SideIndexBar mIndexBar;
     private EditText mSearchBox;
+    private LinearLayout linSearchBox;
+    private TextView mSearchBoxTv;
     private TextView mCancelBtn;
     private ImageView mClearAllBtn;
+    private LinearLayout linSearchView;
+    private View mViewX;
+    private View mViewWhite;
 
     private Context mContext;
     private LinearLayoutManager mLayoutManager;
     private CityListAdapter mAdapter;
+    private SearchAdapter mSearchAdapter;
     private boolean mIsShowHisCity;
     private List<City> mAllCities;
     private List<HotCity> mHotCities;
     private List<HisCity> mHisCities;
     private List<City> mResults;
+    private List<City> mResultsSearch;
 
     private DBManager dbManager;
 
@@ -73,6 +83,9 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
 
     private boolean enableAnim = false;
     private int mAnimStyle = R.style.DefaultCityPickerAnimation;
+    private int mCityStyle = R.style.DefaultCityPickerTheme;
+    //搜索框，默认为1，样式2则是为点击跳转，无取消
+    private int mSearchStyle = 1;
     private LocatedCity mLocatedCity;
     private int locateState;
     private OnPickListener mOnPickListener;
@@ -96,7 +109,6 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
         setStyle(STYLE_NORMAL, R.style.CityPickerStyle);
         //设置了SOFT_INPUT_ADJUST_RESIZE，dialog也不会被往上顶
         setStyle( STYLE_NORMAL, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
-
     }
 
     public void setLocatedCity(LocatedCity location){
@@ -107,10 +119,19 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
         mIsShowHisCity = isShowHisCity;
     }
 
+    public void setSearchStyle(int searchStyle){
+        mSearchStyle = searchStyle;
+    }
+
     public void setHotCities(List<HotCity> data){
         if (data != null && !data.isEmpty()){
             this.mHotCities = data;
         }
+    }
+
+    @SuppressLint("ResourceType")
+    public void setCityStyle(@StyleRes int cityStyle){
+        this.mCityStyle = cityStyle <= 0 ? mCityStyle : cityStyle;
     }
 
     public void setHisCities(List<HisCity> data){
@@ -141,13 +162,42 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
 
     private void initView(){
         mRecyclerView = mContentView.findViewById(R.id.cp_city_recyclerview);
+        mViewWhite = mContentView.findViewById(R.id.view_search);
+        mSearchRecyclerView = mContentView.findViewById(R.id.cp_city_search_recyclerview);
         mEmptyView = mContentView.findViewById(R.id.cp_empty_view);
         mOverlayTextView = mContentView.findViewById(R.id.cp_overlay);
         mIndexBar = mContentView.findViewById(R.id.cp_side_index_bar);
         mSearchBox = mContentView.findViewById(R.id.cp_search_box);
+        linSearchBox = mContentView.findViewById(R.id.lin_search_cp_main);
+        mSearchBoxTv = mContentView.findViewById(R.id.cp_search_box_tv);
         mCancelBtn = mContentView.findViewById(R.id.cp_cancel);
+        linSearchView = mContentView.findViewById(R.id.cp_search_view);
         mClearAllBtn = mContentView.findViewById(R.id.cp_clear_all);
-
+        mViewX = mContentView.findViewById(R.id.cp_view_x);
+        if (mSearchStyle==2){
+            mCancelBtn.setVisibility(View.GONE);
+            mViewX.setVisibility(View.GONE);
+            mSearchBoxTv.setVisibility(View.VISIBLE);
+            linSearchBox.setVisibility(View.GONE);
+            linSearchView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mRecyclerView.setVisibility(View.GONE);
+                    mSearchRecyclerView.setVisibility(View.VISIBLE);
+                    mCancelBtn.setVisibility(View.VISIBLE);
+                    mViewWhite.setVisibility(View.VISIBLE);
+                    mSearchBoxTv.setVisibility(View.GONE);
+                    linSearchBox.setVisibility(View.VISIBLE);
+                    mIndexBar.setVisibility(View.GONE);
+                }
+            });
+        }else {
+            mSearchBoxTv.setVisibility(View.GONE);
+            linSearchBox.setVisibility(View.VISIBLE);
+            linSearchView.setOnClickListener(null);
+            mViewX.setVisibility(View.VISIBLE);
+            mCancelBtn.setVisibility(View.VISIBLE);
+        }
     }
     private void initViews() {
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
@@ -173,7 +223,11 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
             }
         });
-
+        mSearchRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        mSearchRecyclerView.setHasFixedSize(true);
+        mSearchAdapter = new SearchAdapter(getActivity(), mResultsSearch);
+        mSearchAdapter.setInnerListener(this);
+        mSearchRecyclerView.setAdapter(mSearchAdapter);
 
         mIndexBar.setNavigationBarHeight(ScreenUtil.getNavigationBarHeight(getActivity()));
         mIndexBar.setOverlayTextView(mOverlayTextView)
@@ -185,6 +239,7 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
 
     private void initData() {
         mContext = getContext();
+        mResultsSearch = new ArrayList<>();
         Bundle args = getArguments();
         if (args != null) {
             enableAnim = args.getBoolean("cp_enable_anim");
@@ -254,6 +309,7 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
                 window.setWindowAnimations(mAnimStyle);
             }
         }
+        getActivity().setTheme(mCityStyle);
     }
 
     //测量宽高
@@ -286,16 +342,33 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
             mResults = mAllCities;
             ((SectionItemDecoration)(mRecyclerView.getItemDecorationAt(0))).setData(mResults);
             mAdapter.updateData(mResults);
+            if (mSearchStyle==2) {
+                mResultsSearch.clear();
+                mSearchAdapter.notifyDataSetChanged();
+            }
         }else {
             mClearAllBtn.setVisibility(View.VISIBLE);
+            if (mSearchStyle==2) {
+                mCancelBtn.setVisibility(View.VISIBLE);
+            }
             //开始数据库查找
             mResults = dbManager.searchCity(keyword);
             ((SectionItemDecoration)(mRecyclerView.getItemDecorationAt(0))).setData(mResults);
             if (mResults == null || mResults.isEmpty()){
                 mEmptyView.setVisibility(View.VISIBLE);
+                if (mSearchStyle==2) {
+                    mViewWhite.setVisibility(View.GONE);
+                }
             }else {
+                mResultsSearch .addAll(mResults);
                 mEmptyView.setVisibility(View.GONE);
-                mAdapter.updateData(mResults);
+                if (mSearchStyle==2) {
+                    mViewWhite.setVisibility(View.GONE);
+                    mSearchAdapter.setSearchTxt(keyword);
+                    mSearchAdapter.notifyDataSetChanged();
+                }else {
+                    mAdapter.updateData(mResults);
+                }
             }
         }
         mRecyclerView.scrollToPosition(0);
@@ -305,10 +378,21 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.cp_cancel) {
-            dismiss();
-            if (mOnPickListener != null){
-                mOnPickListener.onCancel();
+            if (mSearchStyle==2){
+                mRecyclerView.setVisibility(View.VISIBLE);
+                mSearchRecyclerView.setVisibility(View.GONE);
+                mCancelBtn.setVisibility(View.GONE);
+                mViewWhite.setVisibility(View.GONE);
+                mSearchBoxTv.setVisibility(View.VISIBLE);
+                linSearchBox.setVisibility(View.GONE);
+                mIndexBar.setVisibility(View.VISIBLE);
+            }else {
+                dismiss();
+                if (mOnPickListener != null){
+                    mOnPickListener.onCancel();
+                }
             }
+
         }else if(id == R.id.cp_clear_all){
             mSearchBox.setText("");
         }

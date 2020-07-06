@@ -18,7 +18,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
         TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(R.attr.cpSectionBackground, typedValue, true);
+        context.getTheme().resolveAttribute(R.attr.cpSectionBackground2, typedValue, true);
         mPaint.setColor(context.getResources().getColor(typedValue.resourceId));
         dividerHeight = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0.5f, context.getResources().getDisplayMetrics());
     }

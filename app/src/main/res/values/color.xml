@@ -8,8 +8,12 @@
     <color name="search_bgcolor5">#efefef</color>
     <color name="search_bgcolor6">#595959</color><!--灰色 -->
 
+    <color name="color_0095F4">#0095F4</color>
     <color name="text_hui">#666666</color><!--淡灰色 -->
     <color name="lin_org">#fec00d</color><!--橘黄色 -->
+    <color name="lin_org2">#FD4D00</color>
+
+
     <color name="lin_hui">#f9f9f9</color><!--灰色 -->
     <color name="text_hui2">#333333</color><!--灰色 -->
     <color name="text_hui3">#999999</color><!--灰色 -->
@@ -18,6 +22,8 @@
     <color name="text_hui6">#dcdcdc</color><!--灰色 -->
     <color name="text_hui7">#b4d488</color><!--灰色 -->
     <color name="text_hui8">#8a8a8a</color><!--灰色 -->
+    <color name="text_hui11">#8a8a8a</color><!--灰色 -->
+    <color name="text_hui9">#bbbbbb</color>
 
     <color name="home_bg_k">#b4b4b4</color><!--首页图片框-->
 

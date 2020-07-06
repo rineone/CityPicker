@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
+    android:background="?attr/cpMainBgColor"
     android:padding="16dp">
 
     <FrameLayout
@@ -21,8 +22,11 @@
             android:paddingTop="@dimen/cp_grid_item_padding"
             android:paddingBottom="@dimen/cp_grid_item_padding"
             android:gravity="center"
-            android:background="?attr/cpGridItemBackground"
-            android:textSize="?attr/cpListItemTextSize"
-            android:textColor="?attr/cpListItemTextColor"/>
+            android:text="1111"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:background="?attr/cpGridLocationItemBackground"
+            android:textSize="?attr/cpListLocationItemTextSize"
+            android:textColor="?attr/cpListLocationItemTextColor"/>
     </FrameLayout>
 </LinearLayout>

@@ -11,8 +11,10 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/cp_grid_item_padding"
         android:paddingBottom="@dimen/cp_grid_item_padding"
+        android:ellipsize="end"
+        android:singleLine="true"
         android:gravity="center"
-        android:textSize="?attr/cpListItemTextSize"
-        android:textColor="?attr/cpListItemTextColor"
+        android:textSize="?attr/cpListHisHotItemTextSize"
+        android:textColor="?attr/cpListHisHotItemTextColor"
         android:background="?attr/cpGridItemBackground"/>
 </FrameLayout>

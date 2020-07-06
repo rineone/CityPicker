@@ -9,4 +9,5 @@
     android:paddingTop="16dp"
     android:paddingRight="@dimen/cp_index_bar_width"
     android:paddingEnd="@dimen/cp_index_bar_width"
-    android:paddingStart="16dp" />
+    android:paddingStart="16dp"
+    android:background="?attr/cpMainBgColor"/>
