@@ -417,7 +417,6 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
 
     @Override
     public void dismiss(int position, City data) {
-        dismiss();
         KeyBoardUtils.hideKeyBoard(mContext,mSearchBox);
         if (mOnPickListener != null){
             mOnPickListener.onPick(position, data);
@@ -426,6 +425,7 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
                 saveHisData(data);
             }
         }
+        dismiss();
     }
 
     @Override
