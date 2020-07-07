@@ -1,7 +1,7 @@
 package com.rine.citypicker.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import com.rine.citypicker.R;
 import com.rine.citypicker.model.City;
-import com.rine.citypicker.model.HisCity;
-import com.rine.citypicker.model.HotCity;
 
 import java.util.List;
 

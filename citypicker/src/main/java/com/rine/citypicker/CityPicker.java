@@ -1,13 +1,12 @@
 package com.rine.citypicker;
 
-import android.support.annotation.StyleRes;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import androidx.annotation.StyleRes;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.rine.citypicker.adapter.OnPickListener;
-import com.rine.citypicker.model.HisCity;
 import com.rine.citypicker.model.HotCity;
 import com.rine.citypicker.model.LocateState;
 import com.rine.citypicker.model.LocatedCity;
