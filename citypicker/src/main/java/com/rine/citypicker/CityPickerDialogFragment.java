@@ -40,6 +40,7 @@ import com.rine.citypicker.model.HisCity;
 import com.rine.citypicker.model.HotCity;
 import com.rine.citypicker.model.LocateState;
 import com.rine.citypicker.model.LocatedCity;
+import com.rine.citypicker.util.KeyBoardUtils;
 import com.rine.citypicker.util.ScreenUtil;
 import com.rine.citypicker.util.SharedListUtils;
 import com.rine.citypicker.view.SideIndexBar;
@@ -182,6 +183,7 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
             linSearchView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    KeyBoardUtils.showKeyBoard(mContext,mSearchBox);
                     mRecyclerView.setVisibility(View.GONE);
                     mSearchRecyclerView.setVisibility(View.VISIBLE);
                     mCancelBtn.setVisibility(View.VISIBLE);
@@ -386,6 +388,9 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
                 mSearchBoxTv.setVisibility(View.VISIBLE);
                 linSearchBox.setVisibility(View.GONE);
                 mIndexBar.setVisibility(View.VISIBLE);
+                mEmptyView.setVisibility(View.GONE);
+                mSearchBox.setText("");
+                KeyBoardUtils.hideKeyBoard(mContext,mSearchBox);
             }else {
                 dismiss();
                 if (mOnPickListener != null){
@@ -395,6 +400,7 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
 
         }else if(id == R.id.cp_clear_all){
             mSearchBox.setText("");
+            KeyBoardUtils.hideKeyBoard(mContext,mSearchBox);
         }
     }
 

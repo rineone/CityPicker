@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\androiddemo\CityPicker\citypicker\src\main\res"/><source path="D:\androiddemo\CityPicker\citypicker\build\generated\res\rs\release"/><source path="D:\androiddemo\CityPicker\citypicker\build\generated\res\resValues\release"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\androiddemo\CityPicker\citypicker\src\main\res"><file name="cp_push_bottom_in" path="D:\androiddemo\CityPicker\citypicker\src\main\res\anim\cp_push_bottom_in.xml" qualifiers="" type="anim"/><file name="cp_push_bottom_out" path="D:\androiddemo\CityPicker\citypicker\src\main\res\anim\cp_push_bottom_out.xml" qualifiers="" type="anim"/><file name="cp_grid_item_bg" path="D:\androiddemo\CityPicker\citypicker\src\main\res\drawable\cp_grid_item_bg.xml" qualifiers="" type="drawable"/><file name="cp_overlay_bg" path="D:\androiddemo\CityPicker\citypicker\src\main\res\drawable\cp_overlay_bg.xml" qualifiers="" type="drawable"/><file name="cp_dialog_city_picker" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_dialog_city_picker.xml" qualifiers="" type="layout"/><file name="cp_empty_view" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_empty_view.xml" qualifiers="" type="layout"/><file name="cp_grid_item_layout" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_grid_item_layout.xml" qualifiers="" type="layout"/><file name="cp_list_item_default_layout" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_list_item_default_layout.xml" qualifiers="" type="layout"/><file name="cp_list_item_his_layout" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_list_item_his_layout.xml" qualifiers="" type="layout"/><file name="cp_list_item_hot_layout" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_list_item_hot_layout.xml" qualifiers="" type="layout"/><file name="cp_list_item_location_layout" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_list_item_location_layout.xml" qualifiers="" type="layout"/><file name="cp_list_item_search" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_list_item_search.xml" qualifiers="" type="layout"/><file name="cp_search_view" path="D:\androiddemo\CityPicker\citypicker\src\main\res\layout\cp_search_view.xml" qualifiers="" type="layout"/><file name="cp_icon_clear_all" path="D:\androiddemo\CityPicker\citypicker\src\main\res\mipmap-xxhdpi\cp_icon_clear_all.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="cp_icon_empty" path="D:\androiddemo\CityPicker\citypicker\src\main\res\mipmap-xxhdpi\cp_icon_empty.png" qualifiers="xxhdpi-v4" type="mipmap"/><file path="D:\androiddemo\CityPicker\citypicker\src\main\res\values\attrs.xml" qualifiers=""><attr format="color|reference" name="cpMainBgColor"/><attr format="color|reference" name="cpMainSearchBgColor"/><attr format="dimension|reference" name="cpTitleHeight"/><attr format="dimension|reference" name="cpTitleLeft"/><attr format="reference" name="cpTitleStr"/><attr format="dimension|reference" name="cpTitleTextSize"/><attr format="color|reference" name="cpTitleTextColor"/><attr format="dimension|reference" name="cpCancelTextSize"/><attr format="color|reference" name="cpCancelTextColor"/><attr format="reference" name="cpClearTextIcon"/><attr format="dimension|reference" name="cpSearchTextSize"/><attr format="color|reference" name="cpSearchTextColor"/><attr format="string|reference" name="cpSearchHintText"/><attr format="color|reference" name="cpSearchHintTextColor"/><attr format="reference" name="cpSearchCursorDrawable"/><attr format="reference" name="cpSearchLeft"/><attr format="dimension|reference" name="cpSearchLeftPadding"/><attr format="dimension|reference" name="cpSearchPaddingHo"/><attr format="dimension|reference" name="cpSearchClearRight"/><attr format="dimension|reference" name="cpSearchHeight"/><attr format="color|reference" name="cpSearchBg1"/><attr format="color|reference" name="cpSearchBg2"/><attr format="color|reference" name="cpSearchColor"/><attr format="dimension|reference" name="cpListItemTextSize"/><attr format="color|reference" name="cpListItemTextColor"/><attr format="dimension|reference" name="cpListItemHeight"/><attr format="reference" name="cpEmptyIcon"/><attr format="dimension|reference" name="cpEmptyIconWidth"/><attr format="dimension|reference" name="cpEmptyIconHeight"/><attr format="string|reference" name="cpEmptyText"/><attr format="dimension|reference" name="cpEmptyTextSize"/><attr format="color|reference" name="cpEmptyTextColor"/><attr format="color|reference" name="cpSearchItemBackground"/><attr format="dimension|reference" name="cpSearchItemHeight"/><attr format="dimension|reference" name="cpSearchItemHorizontal"/><attr format="color|reference" name="cpSearchItemTextColor"/><attr format="dimension|reference" name="cpSearchItemTextSize"/><attr format="color|reference" name="cpGridLocationItemBackground"/><attr format="dimension|reference" name="cpListLocationItemTextSize"/><attr format="color|reference" name="cpListLocationItemTextColor"/><attr format="dimension|reference" name="cpListHisHotItemTextSize"/><attr format="color|reference" name="cpListHisHotItemTextColor"/><attr format="color|reference" name="cpGridItemBackground"/><attr format="reference" name="cpGridItemSpace"/><attr format="reference" name="cpSectionHeight1"/><attr format="reference" name="cpSectionTextSize1"/><attr format="reference" name="cpSectionTextColor1"/><attr format="reference" name="cpSectionBackground1"/><attr format="reference" name="cpSectionHeight2"/><attr format="reference" name="cpSectionTextSize2"/><attr format="reference" name="cpSectionTextColor2"/><attr format="reference" name="cpSectionBackground2"/><attr format="reference" name="cpIndexBarTextSize"/><attr format="reference" name="cpIndexBarNormalTextColor"/><attr format="reference" name="cpIndexBarSelectedTextColor"/><attr format="dimension|reference" name="cpIndexBarMarginTop"/><attr format="dimension|reference" name="cpIndexBarMarginBottom"/><attr format="dimension|reference" name="cpOverlayWidth"/><attr format="dimension|reference" name="cpOverlayHeight"/><attr format="dimension|reference" name="cpOverlayTextSize"/><attr format="color|reference" name="cpOverlayTextColor"/><attr format="color|reference" name="cpOverlayBackground"/></file><file path="D:\androiddemo\CityPicker\citypicker\src\main\res\values\colors.xml" qualifiers=""><color name="white">#FFFFFF</color><color name="cp_colorPrimary">#3F51B5</color><color name="cp_colorPrimaryDark">#303F9F</color><color name="cp_colorAccent">#3F51B5</color><color name="cp_color_gray_light">#cdcdcd</color><color name="cp_color_gray">#999999</color><color name="cp_color_gray_deep">#666666</color><color name="cp_color_gray_dark">#333333</color><color name="cp_color_section_bg">#EDEDED</color><color name="cp_color_grid_item_bg">#f5f5f5</color></file><file path="D:\androiddemo\CityPicker\citypicker\src\main\res\values\dimens.xml" qualifiers=""><dimen name="cp_default_padding">16dp</dimen><dimen name="cp_index_bar_width">36dp</dimen><dimen name="cp_index_bar_text_size">13sp</dimen><dimen name="cp_cancel_text_size">15sp</dimen><dimen name="cp_search_text_size">15sp</dimen><dimen name="cp_empty_icon_width">56dp</dimen><dimen name="cp_empty_icon_height">56dp</dimen><dimen name="cp_empty_text_size">14sp</dimen><dimen name="cp_section_height">32dp</dimen><dimen name="cp_section_text_size">15sp</dimen><dimen name="cp_list_item_height">50dp</dimen><dimen name="cp_list_item_text_size">15sp</dimen><dimen name="cp_grid_item_space">16dp</dimen><dimen name="cp_grid_item_padding">10dp</dimen><dimen name="cp_overlay_width">100dp</dimen><dimen name="cp_overlay_height">100dp</dimen><dimen name="cp_overlay_text_size">28sp</dimen></file><file path="D:\androiddemo\CityPicker\citypicker\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">CityPicker</string><string name="unknow">未知</string><string name="city_select_str">城市选择</string><string name="cp_search_hint_text">城市中文名或拼音</string><string name="cp_cancel">取消</string><string name="cp_no_result">没有找到，换个词试试~</string><string name="cp_locate_failed">定位失败</string><string name="cp_locating">正在定位…</string><string name="loc_city_first">定</string><string name="his_city_first">历</string><string name="his_city_left_nav">历史</string><string name="his_city_nav">历史城市</string><string name="hot_city_first">热</string><string name="hot_city_left_nav">热门</string><string name="hot_city_nav">热门城市</string></file><file path="D:\androiddemo\CityPicker\citypicker\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light">
+        
+        <item name="colorPrimary">@color/cp_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/cp_colorPrimaryDark</item>
+        <item name="colorAccent">@color/cp_colorAccent</item>
+    </style><style name="CityPickerStyle" parent="AlertDialog.AppCompat">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style><style name="DefaultCityPickerAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/cp_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/cp_push_bottom_out</item>
+    </style><style name="DefaultCityPickerTheme" parent="AppTheme">
+        
+        <item name="cpMainBgColor">@color/white</item>
+        
+        <item name="cpMainSearchBgColor">@color/white</item>
+        <item name="cpSearchItemBackground">@color/white</item>
+        <item name="cpSearchItemHeight">@dimen/cp_section_height</item>
+        <item name="cpSearchItemTextColor">@color/cp_color_gray_dark</item>
+        <item name="cpSearchItemTextSize">@dimen/cp_search_text_size</item>
+        <item name="cpSearchItemHorizontal">@dimen/cp_default_padding</item>
+        <item name="cpSearchHeight">@dimen/cp_empty_icon_height</item>
+        <item name="cpSearchPaddingHo">15dp</item>
+        <item name="cpSearchLeft">@null</item>
+        <item name="cpSearchLeftPadding">34dp</item>
+        <item name="cpSearchClearRight">14dp</item>
+
+        <item name="cpSearchColor">@color/cp_color_gray_dark</item>
+
+
+        <item name="cpTitleHeight">50dp</item>
+        <item name="cpTitleLeft">@null</item>
+        <item name="cpTitleStr">@string/city_select_str</item>
+        <item name="cpTitleTextSize">15sp</item>
+        <item name="cpTitleTextColor">@color/cp_color_gray_dark</item>
+        
+        <item name="cpSearchBg1">#00000000</item>
+        <item name="cpSearchBg2">#00000000</item>
+        
+        <item name="cpCancelTextSize">@dimen/cp_cancel_text_size</item>
+        <item name="cpCancelTextColor">@color/cp_color_gray</item>
+
+        
+        <item name="cpClearTextIcon">@mipmap/cp_icon_clear_all</item>
+        <item name="cpSearchTextSize">@dimen/cp_search_text_size</item>
+        <item name="cpSearchTextColor">@color/cp_color_gray_dark</item>
+        <item name="cpSearchHintText">@string/cp_search_hint_text</item>
+        <item name="cpSearchHintTextColor">@color/cp_color_gray_light</item>
+        <item name="cpSearchCursorDrawable">@color/cp_color_gray_dark</item>
+
+        
+        <item name="cpEmptyIcon">@mipmap/cp_icon_empty</item>
+        <item name="cpEmptyIconWidth">@dimen/cp_empty_icon_width</item>
+        <item name="cpEmptyIconHeight">@dimen/cp_empty_icon_height</item>
+        <item name="cpEmptyText">@string/cp_no_result</item>
+        <item name="cpEmptyTextSize">@dimen/cp_empty_text_size</item>
+        <item name="cpEmptyTextColor">@color/cp_color_gray_deep</item>
+
+        
+        <item name="cpGridLocationItemBackground">@drawable/cp_grid_item_bg</item>
+        <item name="cpListItemTextSize">@dimen/cp_list_item_text_size</item>
+        <item name="cpListItemTextColor">@color/cp_color_gray_deep</item>
+
+        
+        <item name="cpGridItemBackground">@drawable/cp_grid_item_bg</item>
+        <item name="cpGridItemSpace">@dimen/cp_grid_item_space</item>
+        <item name="cpListHisHotItemTextSize">@dimen/cp_list_item_text_size</item>
+        <item name="cpListHisHotItemTextColor">@color/cp_color_gray_deep</item>
+
+        
+        <item name="cpListItemHeight">@dimen/cp_list_item_height</item>
+        <item name="cpListLocationItemTextSize">@dimen/cp_list_item_text_size</item>
+        <item name="cpListLocationItemTextColor">@color/cp_color_gray_deep</item>
+
+        
+        <item name="cpSectionHeight1">@dimen/cp_section_height</item>
+        <item name="cpSectionTextSize1">@dimen/cp_section_text_size</item>
+        <item name="cpSectionTextColor1">@color/cp_color_gray</item>
+        <item name="cpSectionBackground1">@color/cp_color_section_bg</item>
+
+        
+        <item name="cpSectionHeight2">@dimen/cp_section_height</item>
+        <item name="cpSectionTextSize2">@dimen/cp_section_text_size</item>
+        <item name="cpSectionTextColor2">@color/cp_color_gray</item>
+        <item name="cpSectionBackground2">@color/cp_color_section_bg</item>
+
+        
+        <item name="cpIndexBarTextSize">@dimen/cp_index_bar_text_size</item>
+        <item name="cpIndexBarNormalTextColor">@color/cp_color_gray</item>
+        <item name="cpIndexBarSelectedTextColor">@color/cp_color_gray_dark</item>
+        <item name="cpIndexBarMarginTop">0dp</item>
+        <item name="cpIndexBarMarginBottom">0dp</item>
+
+        
+        <item name="cpOverlayWidth">@dimen/cp_overlay_width</item>
+        <item name="cpOverlayHeight">@dimen/cp_overlay_height</item>
+        <item name="cpOverlayTextSize">@dimen/cp_overlay_text_size</item>
+        <item name="cpOverlayTextColor">@android:color/white</item>
+        <item name="cpOverlayBackground">@drawable/cp_overlay_bg</item>
+    </style></file></source><source path="D:\androiddemo\CityPicker\citypicker\build\generated\res\rs\release"/><source path="D:\androiddemo\CityPicker\citypicker\build\generated\res\resValues\release"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\androiddemo\CityPicker\citypicker\src\release\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release" generated-set="release$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\androiddemo\CityPicker\citypicker\src\release\res"/></dataSet><mergedItems/></merger>

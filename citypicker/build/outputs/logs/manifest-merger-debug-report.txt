@@ -1,0 +1,53 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+	package
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:1-14:12
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:5:1-75
+	android:name
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:5:18-73
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:6:1-76
+	android:name
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:6:18-74
+application
+ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:7:5-12:19
+	android:supportsRtl
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:9:9-41
+	android:allowBackup
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml:8:9-35
+uses-sdk
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+		ADDED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml
+		INJECTED from D:\androiddemo\CityPicker\citypicker\src\main\AndroidManifest.xml

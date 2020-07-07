@@ -6,6 +6,8 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +26,7 @@ import java.util.Calendar;
  * @version 1.0(2018/4/24)
  * Acivity  基类
  */
-public abstract class BaseFragmentActivity extends FragmentActivity implements View.OnClickListener {
+public abstract class BaseFragmentActivity extends AppCompatActivity implements View.OnClickListener {
     //标题信息
     /**状态栏占位view**/
     protected View viewStatusBar;

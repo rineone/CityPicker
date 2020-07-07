@@ -112,42 +112,67 @@ public class Tab6Activity extends BaseFragmentActivity  implements CompoundButto
 
                 break;
             case R.id.btn_tab6_pick:
-                CityPicker.from(Tab6Activity.this)
-                        .enableAnimation(enable)
-                        .setAnimationStyle(anim)
-                        .setCityStyle(theme)
+                List<HotCity> hotCities = new ArrayList<>();
+                hotCities.add(new HotCity("北京", "", "110000"));
+                hotCities.add(new HotCity("杭州", "", "330000"));
+                CityPicker.from(this)
+                        .setLocatedCity(new LocatedCity("深圳", "广东", "101280601"))
+                        .setCityStyle(R.style.CityPickerStyle)
                         .setSearchStyle(2)
                         .setLocatedCity(null)
-                        .isShowHisCity(isShowHisCity)
+                        .isShowHisCity(true)
                         .setHotCities(hotCities)
                         .setOnPickListener(new OnPickListener() {
                             @Override
                             public void onPick(int position, City data) {
-                                currentTV.setText(String.format("当前城市：%s，%s", data.getName(), data.getCode()));
-                                Toast.makeText(
-                                        getApplicationContext(),
-                                        String.format("点击的数据：%s，%s", data.getName(), data.getCode()),
-                                        Toast.LENGTH_SHORT)
-                                        .show();
+//                                tvLocation.setText(data.getName());
                             }
 
                             @Override
                             public void onCancel() {
-                                Toast.makeText(getApplicationContext(), "取消选择", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
                             public void onLocate() {
-                                //开始定位，这里模拟一下定位
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        CityPicker.from(Tab6Activity.this).locateComplete(new LocatedCity("深圳", "广东", "101280601"), LocateState.SUCCESS);
-                                    }
-                                }, 3000);
                             }
                         })
                         .show();
+//                CityPicker.from(this)
+//                        .enableAnimation(enable)
+//                        .setAnimationStyle(anim)
+//                        .setCityStyle(theme)
+//                        .setSearchStyle(2)
+//                        .setLocatedCity(null)
+//                        .isShowHisCity(isShowHisCity)
+//                        .setHotCities(hotCities)
+//                        .setOnPickListener(new OnPickListener() {
+//                            @Override
+//                            public void onPick(int position, City data) {
+//                                currentTV.setText(String.format("当前城市：%s，%s", data.getName(), data.getCode()));
+//                                Toast.makeText(
+//                                        getApplicationContext(),
+//                                        String.format("点击的数据：%s，%s", data.getName(), data.getCode()),
+//                                        Toast.LENGTH_SHORT)
+//                                        .show();
+//                            }
+//
+//                            @Override
+//                            public void onCancel() {
+//                                Toast.makeText(getApplicationContext(), "取消选择", Toast.LENGTH_SHORT).show();
+//                            }
+//
+//                            @Override
+//                            public void onLocate() {
+//                                //开始定位，这里模拟一下定位
+//                                new Handler().postDelayed(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        CityPicker.from(Tab6Activity.this).locateComplete(new LocatedCity("深圳", "广东", "101280601"), LocateState.SUCCESS);
+//                                    }
+//                                }, 3000);
+//                            }
+//                        })
+//                        .show();
                 break;
         }
     }
