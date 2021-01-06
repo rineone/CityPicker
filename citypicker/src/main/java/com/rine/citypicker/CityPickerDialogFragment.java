@@ -200,6 +200,9 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
             mViewX.setVisibility(View.VISIBLE);
             mCancelBtn.setVisibility(View.VISIBLE);
         }
+        if (mOnPickListener != null) {
+            mOnPickListener.onGetView(mContentView);
+        }
     }
     private void initViews() {
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);

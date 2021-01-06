@@ -133,6 +133,12 @@ public class Tab6Activity extends BaseFragmentActivity  implements CompoundButto
                             }
 
                             @Override
+                            public void onGetView(View view) {
+                                TextView mCancelBtn = view.findViewById(com.rine.citypicker.R.id.cp_cancel);
+                                String a = "1";
+                            }
+
+                            @Override
                             public void onLocate() {
                             }
                         })
