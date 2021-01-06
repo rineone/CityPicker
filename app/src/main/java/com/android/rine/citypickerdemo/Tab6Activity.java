@@ -21,6 +21,8 @@ import com.rine.citypicker.model.LocatedCity;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.fragment.app.DialogFragment;
+
 /**
  * @author RINE
  * @version 1.0(2019 / 1 / 15)
@@ -133,7 +135,7 @@ public class Tab6Activity extends BaseFragmentActivity  implements CompoundButto
                             }
 
                             @Override
-                            public void onGetView(View view) {
+                            public void onGetView(View view, DialogFragment dialogFragment) {
                                 TextView mCancelBtn = view.findViewById(com.rine.citypicker.R.id.cp_cancel);
                                 String a = "1";
                             }
